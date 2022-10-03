@@ -1,16 +1,16 @@
 ## Terraform connecting aws gateway to aws lambda and aws lambda to aws sns to send email assignment 
 
-* change the email address in variables.tf
+*note* change the email address in variables.tf
 
 *run*:  
 ```
-git clone 
+git clone https://github.com/obxd/aws_terraform_assignment
 cd aws_terraform_assignment
 terraform init
 terraform apply
 ```  
 
-This will print the `[link]` to which we can send requests  
+This will print the `[url]` to which we can send requests  
 
 *requests example: *:    
 
@@ -19,7 +19,7 @@ This will print the `[link]` to which we can send requests
 curl --header "Content-Type: application/json" \
   --request POST \
   --data '[1,2,3,4,5]' \
-  [link]
+  [url]
   
 ```
 
