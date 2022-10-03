@@ -23,4 +23,4 @@ curl --header "Content-Type: application/json" \
   
 ```
 
-This will send you the sum of the numbers via email ( you need to accept subscription first).
+This will send you the sum of the numbers via email ( you need to accept subscription first) and in the response json.
