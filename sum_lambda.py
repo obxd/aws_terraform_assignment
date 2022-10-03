@@ -23,7 +23,7 @@ def lambda_handler(event, context):
         arn = os.environ["SNS_ARN"]
         client = boto3.client("sns")
 
-        resoult = sum(input)
+        result = sum(input)
 
         response = client.publish(
             TargetArn=arn,
@@ -33,7 +33,7 @@ def lambda_handler(event, context):
         if "HTTPStatusCode" in response.keys() and response["HTTPStatusCode"] != 200:
             return json.dumps({"status": 500})
 
-        return json.dumps({"status": 200, "resoult": resoult})
+        return json.dumps({"status": 200, "result": result})
 
     else:
         return json.dumps({"status": 400})
